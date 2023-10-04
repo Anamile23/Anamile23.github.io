@@ -1,0 +1,78 @@
+
+body{
+    
+    background-image: url(fondo.jpg);
+    text-align: center;
+    
+
+}
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 3%;
+    margin-right: 5%;
+  }
+  
+  .container2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    gap: 3%;
+  }
+  
+  .hija1, .hija2, .hija3, .hija4 {
+   
+    text-align: center;
+  }
+
+
+img{
+    width: 500px;
+    height: 400px;
+    border-radius: 5%;
+    box-shadow: 50px 50px 50px rgb(65, 242, 242);
+}
+a{
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    color: aqua;
+}
+h1{
+    color: rgb(21, 10, 176);
+}
+
+@media (max-width: 1081px) {
+    .container{
+        margin-right: 10%;
+    }
+    
+}
+@media (max-width: 900px) {
+        .container{
+            display: flex;
+            width: 90%;
+           margin-left:10%;
+        }
+
+        img{
+        width: 400px;
+        height: 300px;
+         border-radius: 5%;
+         margin-right: 10%;
+         margin-left: 10%;
+        }
+}
+@media (max-width: 600px){
+    h1{
+        margin-left: 30%;
+        text-align: center;
+    }
+    .container2{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+}

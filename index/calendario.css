@@ -1,0 +1,1542 @@
+body{
+    
+    background-color:gray;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2%;
+    width: 100vh;
+    height: auto;
+    margin: 2%;
+}
+
+
+
+
+
+
+
+.hija1,.hija2, .hija3, .hija4, .hija5, .hija6, 
+.hija7, .hija8, .hija9, .hija10, .hija11, .hija12{
+    display: grid;
+    grid-template-rows:repeat(2,1fr) ;
+background-color:white;
+border-radius: 3%;
+
+
+
+}
+
+
+
+.ene,.feb, .mar, .abr, .may, .jun,
+.jul, .ago, .sep, .oct, .nov, .dic{
+    display: flex;
+
+    background-color: rgb(231, 118, 118);
+    
+    border-radius: 3%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 50px;
+    color: white;
+}
+
+
+
+
+ table{
+    display: flex;
+    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    font-weight: bold;
+    justify-content: center;
+    margin-top: 3%;
+    border: 1px solid white;
+     width: auto;
+     height: auto;
+    
+     border-radius: 3%;
+     
+ }
+
+ td {
+    
+   text-align: center;
+    margin-left: 5%;
+    
+    
+    border: 1px solid white;
+}
+.dia{
+    color: salmon;
+    
+}
+
+.gris{
+    color: grey;
+}
+.fes{
+    color: salmon;
+}
+
+/*enero*/  
+.fig{
+        position: relative;
+        border-radius: 40%;
+        width: 5px; 
+        height: 20px; 
+        border: 3px solid #919191;
+    background: #e7e4e4;
+        top: 95%;
+        left: 22%;
+        box-shadow: 100px 50px 50px  gray;
+        
+}
+
+.fig1{
+    position: relative;
+    border-radius: 40%;
+    width: 5px; 
+    height: 20px; 
+    border: 3px solid #919191;
+    background: #e7e4e4;
+    top: 95%;
+    left: 24%;
+
+}
+
+.fig2{
+   position:relative;
+    border-radius: 40%;
+    width: 5px; 
+    height: 20px; 
+    border: 3px solid #919191;
+    background: #e7e4e4;
+    top: 95%;
+    left: 65%;
+
+}
+
+.fig3{
+    position: relative;
+    border-radius: 40%;
+    width: 5px; 
+    height: 20px; 
+    border: 3px solid #919191;
+    background: #e7e4e4;
+    top:95%;
+    left: 67%;
+
+}
+
+/*febrero*/
+.fig5{
+    position: relative;
+    border-radius: 40%;
+    width: 5px; 
+    height: 20px; 
+    border: 3px solid #919191;
+    background: #e7e4e4;
+    top: 95%;
+    left: 20%;
+   
+    
+}
+
+.fig6{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top: 95%;
+left: 23%;
+
+}
+
+.fig7{
+position:relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top:95%;
+left: 65%;
+
+}
+
+.fig8{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top:95%;
+left: 67%;
+
+}
+/* marzo*/
+.fig9{
+    position: relative;
+    border-radius: 40%;
+    width: 5px; 
+    height: 20px; 
+    border: 3px solid #919191;
+    background: #e7e4e4;
+    top: 95%;
+    left: 21%;
+    
+    box-shadow: 100% gray;
+    
+}
+
+.fig10{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top: 95%;
+left: 23%;
+
+}
+
+.fig11{
+position:relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top:95%;
+left: 65%;
+
+}
+
+.fig12{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top:95%;
+left: 67%;
+
+}
+ /*abril*/
+.fig13{
+    position: relative;
+    border-radius: 40%;
+    width: 5px; 
+    height: 20px; 
+    border: 3px solid #919191;
+    background: #e7e4e4;
+    top: 95%;
+    left: 20%;
+    
+    
+}
+
+.fig14{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top: 95%;
+left: 22%;
+
+}
+
+.fig15{
+position:relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top:95%;
+left: 65%;
+
+}
+
+.fig16{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top:95%;
+left: 67%;
+
+}
+
+/*mayo*/
+.fig17{
+    position: relative;
+    border-radius: 40%;
+    width: 5px; 
+    height: 20px; 
+    border: 3px solid #919191;
+    background: #e7e4e4;
+    top: 95%;
+    left: 21%;
+    
+    
+}
+
+.fig18{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top: 95%;
+left: 23%;
+
+}
+
+.fig19{
+position:relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top:95%;
+left: 65%;
+
+}
+
+.fig20{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top:95%;
+left: 67%;
+
+}
+ /*junio*/
+.fig21{
+    position: relative;
+    border-radius: 40%;
+    width: 5px; 
+    height: 20px; 
+    border: 3px solid #919191;
+    background: #e7e4e4;
+    top: 95%;
+    left: 21%;
+   
+    
+}
+
+.fig22{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top: 95%;
+left: 23%;
+
+}
+
+.fig23{
+position:relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top:95%;
+left: 65%;
+
+}
+
+.fig24{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top:95%;
+left: 67%;
+
+}
+
+/*julio*/
+.fig25{
+    position: relative;
+    border-radius: 40%;
+    width: 5px; 
+    height: 20px; 
+    border: 3px solid #919191;
+    background: #e7e4e4;
+    top: 95%;
+    left: 21%;
+    
+    
+}
+
+.fig26{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top: 95%;
+left: 23%;
+
+}
+
+.fig27{
+position:relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top:95%;
+left: 65%;
+
+}
+
+.fig28{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top:95%;
+left: 67%;
+
+}
+
+/*agosto*/
+.fig29{
+    position: relative;
+    border-radius: 40%;
+    width: 5px; 
+    height: 20px; 
+    border: 3px solid #919191;
+    background: #e7e4e4;
+    top: 95%;
+    left: 21%;
+    box-shadow: 100% gray;
+    
+}
+
+.fig30{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top: 95%;
+left: 23%;
+
+}
+
+.fig31{
+position:relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top:95%;
+left: 65%;
+
+}
+
+.fig32{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top:95%;
+left: 67%;
+
+}
+
+/*septiembre*/
+.fig33{
+    position: relative;
+    border-radius: 40%;
+    width: 5px; 
+    height: 20px; 
+    border: 3px solid #919191;
+    background: #e7e4e4;    
+    top: 95%;
+    left: 22%;
+    
+    
+}
+
+.fig34{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top: 95%;
+left: 24%;
+
+}
+
+.fig35{
+position:relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top:95%;
+left: 65%;
+
+}
+
+.fig36{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top:95%;
+left: 67%;
+
+}
+
+
+/*octubre*/
+.fig37{
+    position: relative;
+    border-radius: 40%;
+    width: 5px; 
+    height: 20px; 
+    border: 3px solid #919191;
+    background: #e7e4e4;
+    top: 95%;
+    left: 20%;
+    
+    
+}
+
+.fig38{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top: 95%;
+left: 22%;
+
+}
+
+.fig39{
+position:relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top:95%;
+left: 65%;
+
+}
+
+.fig40{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top:95%;
+left: 67%;
+
+}
+/*noviembre*/
+.fig41{
+    position: relative;
+    border-radius: 40%;
+    width: 5px; 
+    height: 20px; 
+    border: 3px solid #919191;
+    background: #e7e4e4;
+    top: 95%;
+    left: 21%;
+    
+    
+}
+
+.fig42{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top: 95%;
+left: 23%;
+
+}
+
+.fig43{
+position:relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top:95%;
+left: 65%;
+
+}
+
+.fig44{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top:95%;
+left: 67%;
+
+}
+
+/*diciembre*/
+.fig45{
+    position: relative;
+    border-radius: 40%;
+    width: 5px; 
+    height: 20px; 
+    border: 3px solid #919191;
+    background: #e7e4e4;
+    top: 95%;
+    left: 21%;
+    
+    
+}
+
+.fig46{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top: 95%;
+left: 23%;
+
+}
+
+.fig47{
+position:relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top:95%;
+left: 65%;
+
+}
+
+.fig48{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top:95%;
+left: 67%;
+
+}
+
+@media (max-width: 800px){
+ 
+    .container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+    /*abril
+.fig13{
+    position: relative;
+    border-radius: 40%;
+    width: 5px; 
+    height: 20px; 
+    border: 2px solid #c4c3c3;
+    background: white;
+    top: 95%;
+    left: 26%;
+    box-shadow: 100% gray;
+    
+}
+
+.fig14{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 2px solid #c4c3c3;
+background:white;
+top: 95%;
+left: 28%;
+
+}
+
+.fig15{
+position:relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 2px solid #c4c3c3;
+background:white;
+top:95%;
+left: 70%;
+
+}
+
+.fig16{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 2px solid #c4c3c3;
+background: white;
+top:95%;
+left: 72%;
+
+}*/
+
+/*septiembre
+.fig33{
+    position: relative;
+    border-radius: 40%;
+    width: 5px; 
+    height: 20px; 
+    border: 2px solid #c4c3c3;
+    background: white;
+    top: 96%;
+    left: 20%;
+    box-shadow: 100% gray;
+    
+}
+
+.fig34{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 2px solid #c4c3c3;
+background:white;
+top: 96%;
+left: 24%;
+
+}
+
+.fig35{
+position:relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 2px solid #c4c3c3;
+background:white;
+top:96%;
+left: 68%;
+
+}
+
+.fig36{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 2px solid #c4c3c3;
+background: white;
+top:96%;
+left: 70%;
+
+}*/
+}
+
+@media (max-width: 700px){
+ 
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /*abril
+.fig13{
+    position: relative;
+    border-radius: 40%;
+    width: 5px; 
+    height: 20px; 
+    border: 2px solid #c4c3c3;
+    background: white;
+    top: 96%;
+    left: 20%;
+    box-shadow: 100% gray;
+    
+}
+
+.fig14{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 2px solid #c4c3c3;
+background:white;
+top: 96%;
+left: 24%;
+
+}
+
+.fig15{
+position:relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 2px solid #c4c3c3;
+background:white;
+top:96%;
+left: 68%;
+
+}
+
+.fig16{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 2px solid #c4c3c3;
+background: white;
+top:96%;
+left: 72%;
+
+}*/
+
+/*septiembre
+.fig33{
+    position: relative;
+    border-radius: 40%;
+    width: 5px; 
+    height: 20px; 
+    border: 2px solid #c4c3c3;
+    background: white;
+    top: 96%;
+    left: 20%;
+    box-shadow: 100% gray;
+    
+}
+
+.fig34{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 2px solid #c4c3c3;
+background:white;
+top: 96%;
+left: 24%;
+
+}
+
+.fig35{
+position:relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 2px solid #c4c3c3;
+background:white;
+top:96%;
+left: 68%;
+
+}
+
+.fig36{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 2px solid #c4c3c3;
+background: white;
+top:96%;
+left: 70%;
+
+}*/
+}
+
+@media (max-width: 500px){
+
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        background-color: grey;
+        
+    }
+
+
+table{
+    display: flex;
+    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    font-weight: bold;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid white;
+    
+    width: 70vh;
+    height: 40vh;
+     font-size: 22px;
+     border-radius: 3%;
+}
+.hija1,.hija2, .hija3, .hija4, .hija5, .hija6, 
+.hija7, .hija8, .hija9, .hija10, .hija11, .hija12{
+    display: grid;
+    grid-template-rows:repeat(2,1fr) ;
+background-color:white;
+border-radius: 3%;
+width: 75vh;
+height: 100vh;
+}
+.tab{
+    display: flex;
+    
+    margin-left: 5%;
+    justify-content: center;
+    border: 1px solid white;
+     border-radius: 3%;
+}
+
+/*enero*/
+.fig{
+    position: relative;
+    border-radius: 40%;
+    width: 5px; 
+    height: 20px; 
+    border: 3px solid #919191;
+    background: #e7e4e4;
+    top: 95%;
+    left: 26%;
+    box-shadow: 100px 50px 50px  gray;
+    
+}
+
+.fig1{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top: 95%;
+left: 28%;
+
+}
+
+.fig2{
+position:relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top: 95%;
+left: 70%;
+
+}
+
+.fig3{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top:95%;
+left: 72%;
+
+}
+
+/*febrero*/
+.fig5{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top: 95%;
+left: 26%;
+
+
+}
+
+.fig6{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top: 95%;
+left: 28%;
+
+}
+
+.fig7{
+position:relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top:95%;
+left: 70%;
+
+}
+
+.fig8{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top:95%;
+left: 72%;
+
+}
+/* marzo*/
+.fig9{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top: 95%;
+left: 26%;
+
+box-shadow: 100% gray;
+
+}
+
+.fig10{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top: 95%;
+left: 28%;
+
+}
+
+.fig11{
+position:relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top:95%;
+left: 70%;
+
+}
+
+.fig12{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top:95%;
+left: 72%;
+
+}
+/*abril*/
+.fig13{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top: 95%;
+left: 26%;
+
+
+}
+
+.fig14{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top: 95%;
+left: 28%;
+
+}
+
+.fig15{
+position:relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top:95%;
+left: 70%;
+
+}
+
+.fig16{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top:95%;
+left: 72%;
+
+}
+
+/*mayo*/
+.fig17{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top: 95%;
+left: 26%;
+
+
+}
+
+.fig18{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top: 95%;
+left: 28%;
+
+}
+
+.fig19{
+position:relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top:95%;
+left: 70%;
+
+}
+
+.fig20{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top:95%;
+left: 72%;
+
+}
+/*junio*/
+.fig21{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top: 95%;
+left: 26%;
+
+
+}
+
+.fig22{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top: 95%;
+left: 28%;
+
+}
+
+.fig23{
+position:relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top:95%;
+left: 70%;
+
+}
+
+.fig24{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top:95%;
+left: 72%;
+
+}
+
+/*julio*/
+.fig25{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top: 95%;
+left: 26%;
+
+
+}
+
+.fig26{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top: 95%;
+left: 28%;
+
+}
+
+.fig27{
+position:relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top:95%;
+left: 70%;
+
+}
+
+.fig28{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top:95%;
+left: 72%;
+
+}
+
+/*agosto*/
+.fig29{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top: 95%;
+left: 26%;
+
+
+}
+
+.fig30{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top: 95%;
+left: 28%;
+
+}
+
+.fig31{
+position:relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top:95%;
+left: 70%;
+
+}
+
+.fig32{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top:95%;
+left: 72%;
+
+}
+
+/*septiembre*/
+.fig33{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;    
+top: 95%;
+left: 27%;
+
+
+}
+
+.fig34{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top: 95%;
+left: 29%;
+
+}
+
+.fig35{
+position:relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top:95%;
+left: 70%;
+
+}
+
+.fig36{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top:95%;
+left: 72%;
+
+}
+
+
+/*octubre*/
+.fig37{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top: 95%;
+left: 26%;
+
+
+}
+
+.fig38{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top: 95%;
+left: 28%;
+
+}
+
+.fig39{
+position:relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top:95%;
+left: 70%;
+
+}
+
+.fig40{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top:95%;
+left: 72%;
+
+}
+/*noviembre*/
+.fig41{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top: 95%;
+left: 27%;
+
+
+}
+
+.fig42{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top: 95%;
+left: 29%;
+
+}
+
+.fig43{
+position:relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top:95%;
+left: 70%;
+
+}
+
+.fig44{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top:95%;
+left: 72%;
+
+}
+
+/*diciembre*/
+.fig45{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top: 95%;
+left: 27%;
+
+
+}
+
+.fig46{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top: 95%;
+left: 29%;
+
+}
+
+.fig47{
+position:relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top:95%;
+left: 70%;
+
+}
+
+.fig48{
+position: relative;
+border-radius: 40%;
+width: 5px; 
+height: 20px; 
+border: 3px solid #919191;
+background: #e7e4e4;
+top:95%;
+left: 72%;
+
+}
+}

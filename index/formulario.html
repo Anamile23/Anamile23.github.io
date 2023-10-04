@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario</title>
+  <link rel="stylesheet" href="formulario.css">
+</head>
+
+<body>
+  <div class="CONTAINER">
+    <div class="hija1">
+      <div class="registrationform" name="registro">
+        <h1 class="et1">Formulario de Registro</h1>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required placeholder="DIGITE NOMBRE">
+        <p></p>
+        <br>
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required placeholder="DIGITE APELLIDO">
+        <br>
+
+        <label for="documento">tipo documento:</label>
+        <select id="documento" name="documento">
+          <option value="option1">Seleccionar</option>
+          <option value="option2">Cédula de Ciudadanía</option>
+          <option value="option3">Tarjeta de Identidad</option>
+          <option value="option4">Cédula Extranjera</option>
+          <option value="option5">Pasaporte</option>
+          <option value="option6">Permiso por Protección Temporal</option>
+        </select>
+        <br>
+
+        <label for="num">No.Documento:</label>
+        <input type="number" id="num" name="num" required placeholder="DIGTE NÚMERO DOCUMENTO">
+
+        <br>
+
+        <label for="tel">No.Teléfono:</label>
+        <input type="text" id="tel" name="tel" required placeholder="DIGTE No TELÉFONO">
+
+        <br>
+
+        <label for="fecha">Fecha Nacimiento:</label>
+        <input type="date" id="fecha" name="fecha" required>
+        <label for="">Género:</label>
+        <div class="genderselect">
+          <input type="radio" id="hom" name="gender" value="hom" required>
+          <label for="hom">Hombre</label>
+          <input type="radio" id="mujer" name="gender" value="mujer" required>
+          <label for="mujer">Mujer</label>
+        </div>
+        <br>
+        <label for="mail">Correo:</label>
+        <input type="e-mail" id="mail" name="e-mail" required placeholder="DIGITE E-MAIL">
+        <br>
+        <input type="button" value="Guardar Registro" id="guardar" onclick="guardarRegistro()">
+      </div>
+    </div>
+    <img src="Imagen-animada-Mariposa-121 (1).gif" alt="" class="imag">
+  </div>
+  <div id="tablaRegistros"></div>
+  <script>
+    let registros = [];
+
+    function guardarRegistro() {
+      let nombre = document.getElementById("nombre").value;
+      let apellido = document.getElementById("apellido").value;
+      let documento = document.getElementById("documento").value;
+      let num = document.getElementById("num").value;
+      let tel = document.getElementById("tel").value;
+      let fecha = document.getElementById("fecha").value;
+      let gender = document.querySelector('input[name="gender"]:checked').value;
+      let mail = document.getElementById("mail").value;
+
+      console.log(nombre);
+
+      // Crear un objeto con los datos
+      let registro = {
+        nombre: nombre,
+        apellido: apellido,
+        documento: documento,
+        num: num,
+        tel: tel,
+        fecha: fecha,
+        gender: gender,
+        mail: mail
+      };
+
+      registros.push(registro);
+
+      alert("Registro guardado con éxito");
+      console.log(registros);
+
+      //mostrarTablaRegistros();
+
+    }
+
+    function validarEdad(event) {
+      event.preventDefault(); // Evitar que el formulario se envíe automáticamente
+
+
+      let fecha = new Date(document.getElementById("fecha").value);
+
+      // Calcular la edad
+      let hoy = new Date();
+      let edad = hoy.getFullYear() - fechaNacimiento.getFullYear();
+
+
+      if (edad < 18) {
+        alert("Lo siento, debes ser mayor de 18 años para registrarte.");
+      } else {
+
+        alert("Registro exitoso!");
+      }
+    }
+
+
+    function mostrarTablaRegistros() {
+      var tablaHTML = "<h2>Registros</h2><table border='1'><tr><th>Nombre</th><th>Apellido</th><th>Tipo Documento</th><th>Nº Documento</th><th>Teléfono</th><th>Fecha Nacimiento</th><th>Género</th><th>Correo</th></tr>";
+      for (let i = 0; i < registros.length; i++) {
+        tablaHTML += "<tr>";
+        tablaHTML += "<td>" + registros[i].nombre + "</td>";
+        tablaHTML += "<td>" + registros[i].apellido + "</td>";
+        tablaHTML += "<td>" + registros[i].tipoDocumento + "</td>";
+        tablaHTML += "<td>" + registros[i].numDocumento + "</td>";
+        tablaHTML += "<td>" + registros[i].telefono + "</td>";
+        tablaHTML += "<td>" + registros[i].fechaNacimiento + "</td>";
+        tablaHTML += "<td>" + registros[i].genero + "</td>";
+        tablaHTML += "<td>" + registros[i].correo + "</td>";
+        tablaHTML += "</tr>";
+      }
+      tablaHTML += "</table>";
+
+
+      document.getElementById("tablaRegistros").innerHTML = tablaHTML;
+    }
+
+  </script>
+
+
+</body>
+
+</html>
