@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agenda de Citas Veterinarias</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <style>
+
+body{
+    background-image: url(animalesgranja.jpeg);
+   }
+.container{
+   text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 3px;
+    background-color: rgba(252, 250, 250, 0.582);
+    color: rgb(104, 7, 196);
+    font-weight: bold;
+}
+.boton{
+    width:150px;
+    height: 100px;
+    background-color:rgb(255, 192, 203) ;
+    color: rgb(6, 6, 204);
+    font-weight: bold;
+    font-size: large;
+    border-radius: 10%;
+    cursor: pointer;
+
+}
+
+
+    .radio{
+        font-size: x-large;
+        text-align: left;
+    }
+    #tarjetasContainer {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .tarjeta {
+      border: 3px solid black;
+      margin: 10px;
+     background-color: bisque; 
+     padding: 10px;
+      
+      
+      width: 200px;
+      text-align: center;
+      position: relative;
+      background-image: url(gatito2.jpg);
+      color: blue;
+      font-weight: bold;
+      border-radius: 15px;
+    }
+
+    .tarjeta img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .editar-btn,
+    .anular-btn {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      cursor: pointer;
+      color: blue;
+      text-decoration: underline;
+      margin-left: 10px;
+      font-size: medium;
+      background-color: bisque;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+  <h1>Agenda de Citas Veterinarias</h1>
+
+  <div class="radio">
+    <input type="radio" name="filtro" value="abierta" checked> Abierta <br><br>
+    <input type="radio" name="filtro" value="anulada"> Anulada <br><br>
+    <input type="radio" name="filtro" value="terminada"> Terminada <br><br>
+  </div>
+
+  <div id="citasContainer">
+    <div id="tarjetasContainer">
+      <!-- Aquí se mostrarán las tarjetas de citas -->
+    </div>
+  </div>
+
+  <button onclick="mostrarFormulario()" class="boton">Agendar Cita</button>
+</div>
+  <script>
+    let citas = {
+      abierta: [],
+      anulada: [],
+      terminada: []
+    };
+
+    function mostrarFormulario() {
+      Swal.fire({
+        title: 'Ingrese la información',
+        html:
+          '<input id="nombre" placeholder="Nombre Mascota" class="swal2-input">' +
+          '<input id="propietario" placeholder="Nombre Propietario" class="swal2-input">' +
+          '<select id="tipomascota" class="swal2-input">' +
+            '<option value="seleccionar">Seleccionar</option>' +
+            '<option value="perros">Perros</option>' +
+            '<option value="gatos">Gatos</option>' +
+            '<option value="aves">Aves</option>' +
+            '<option value="anfibios">Anfibios</option>' +
+            '<option value="otros">Otros</option>' +
+          '</select>' +
+          '<input id="tel" type="phone" placeholder="Número Teléfono" class="swal2-input">' +
+          '<input id="fecha" type="date" placeholder="Fecha" class="swal2-input">' +
+          '<input id="hora" type="time" placeholder="Hora" class="swal2-input">' +
+          '<textarea id="sintomas" placeholder="Síntomas" class="swal2-input"></textarea>',
+        focusConfirm: false,
+        showCancelButton: true,
+        preConfirm: () => {
+          const nombre = Swal.getPopup().querySelector('#nombre').value;
+          const propietario = Swal.getPopup().querySelector('#propietario').value;
+          const tipomascota = Swal.getPopup().querySelector('#tipomascota').value;
+          const tel = Swal.getPopup().querySelector('#tel').value;
+          const fecha = Swal.getPopup().querySelector('#fecha').value;
+          const hora = Swal.getPopup().querySelector('#hora').value;
+          const sintomas = Swal.getPopup().querySelector('#sintomas').value;
+
+          if (!nombre || !propietario || !tipomascota || !tel || !fecha || !hora || !sintomas) {
+            Swal.showValidationMessage('Todos los campos son obligatorios');
+            return false;
+          }
+
+          // Restricción de fecha (mínimo dos días después de hoy)
+          const dosDiasDespues = new Date();
+          dosDiasDespues.setDate(dosDiasDespues.getDate() + 2);
+          const dosDiasDespuesFormateada = dosDiasDespues.toISOString().split('T')[0];
+          if (fecha < dosDiasDespuesFormateada) {
+            Swal.showValidationMessage('Seleccione una fecha válida (mínimo dos días después de hoy)');
+            return false;
+          }
+
+          // Restricción de hora (de 8:00 A.M. a 5:00 P.M.)
+          if (hora < '08:00' || hora > '17:00') {
+            Swal.showValidationMessage('Seleccione una hora válida (de 8:00 A.M. a 5:00 P.M.)');
+            return false;
+          }
+
+          return { nombre, propietario, tipomascota, tel, fecha, hora, sintomas };
+        }
+      }).then((result) => {
+        if (result.isConfirmed) {
+          const nuevaCita = {
+            estado: 'abierta',
+            nombre: result.value.nombre,
+            propietario: result.value.propietario,
+            tipomascota: result.value.tipomascota,
+            tel: result.value.tel,
+            fecha: result.value.fecha,
+            hora: result.value.hora,
+            sintomas: result.value.sintomas
+          };
+
+          citas.abierta.push(nuevaCita);
+          actualizarListaCitas();
+          mostrarTarjetas();
+          Swal.fire('Registro guardado con éxito');
+          limpiarFormulario();
+        }
+      });
+    }
+
+    function limpiarFormulario() {
+      document.getElementById('nombre').value = '';
+      document.getElementById('propietario').value = '';
+      document.getElementById('tipomascota').selectedIndex = 0;
+      document.getElementById('tel').value = '';
+      document.getElementById('fecha').value = '';
+      document.getElementById('hora').value = '';
+      document.getElementById('sintomas').value = '';
+    }
+
+    function actualizarListaCitas() {
+      // Puedes implementar lógica adicional aquí si es necesario
+    }
+
+    function mostrarTarjetas() {
+      const filtro = document.querySelector('input[name="filtro"]:checked').value;
+      const citasFiltradas = citas[filtro];
+
+      const tarjetasContainer = document.getElementById('tarjetasContainer');
+      tarjetasContainer.innerHTML = '';
+
+      citasFiltradas.forEach(cita => {
+        crearTarjeta(cita);
+      });
+    }
+
+    function crearTarjeta(cita) {
+      const tarjetasContainer = document.getElementById('tarjetasContainer');
+      const tarjeta = document.createElement('div');
+      tarjeta.className = 'tarjeta';
+
+      // Asegúrate de tener una lógica adecuada para obtener la ruta de la imagen
+      const tipoMascota = cita.tipomascota.toLowerCase();
+      const imagen = document.createElement('img');
+      imagen.src = `./imagenes/${tipoMascota}.gif`; // Reemplaza con la ruta correcta y extensión
+      imagen.alt = tipoMascota;
+      tarjeta.appendChild(imagen);
+
+      // Mostrar datos de la cita
+      for (const key in cita) {
+        const parrafo = document.createElement('p');
+        parrafo.textContent = `${key.charAt(0).toUpperCase() + key.slice(1)}: ${cita[key]}`;
+        tarjeta.appendChild(parrafo);
+      }
+
+      // Agregar botones de editar y anular
+      const editarBtn = document.createElement('button');
+      editarBtn.textContent = 'Editar';
+      editarBtn.onclick = () => editarCita(cita);
+      tarjeta.appendChild(editarBtn);
+      editarBtn.className="editarBtn"
+
+      const anularBtn = document.createElement('button');
+      anularBtn.textContent = 'Anular';
+      anularBtn.onclick = () => anularCita(cita);
+      tarjeta.appendChild(anularBtn);
+      anularBtn.className="anularBtn"
+      // Agregar la tarjeta al contenedor
+      tarjetasContainer.appendChild(tarjeta);
+    }
+
+    function editarCita(cita) {
+  Swal.fire({
+    title: 'Editar Cita',
+    html:
+      '<input id="nombre" placeholder="Nombre Mascota" class="swal2-input" value="' + cita.nombre + '">' +
+      '<input id="propietario" placeholder="Nombre Propietario" class="swal2-input" value="' + cita.propietario + '">' +
+      '<select id="tipomascota" class="swal2-input">' +
+        '<option value="seleccionar">Seleccionar</option>' +
+        '<option value="perros" ' + (cita.tipomascota === 'perros' ? 'selected' : '') + '>Perros</option>' +
+        '<option value="gatos" ' + (cita.tipomascota === 'gatos' ? 'selected' : '') + '>Gatos</option>' +
+        '<option value="aves" ' + (cita.tipomascota === 'aves' ? 'selected' : '') + '>Aves</option>' +
+        '<option value="anfibios" ' + (cita.tipomascota === 'anfibios' ? 'selected' : '') + '>Anfibios</option>' +
+        '<option value="otros" ' + (cita.tipomascota === 'otros' ? 'selected' : '') + '>Otros</option>' +
+      '</select>' +
+      '<input id="tel" type="phone" placeholder="Número Teléfono" class="swal2-input" value="' + cita.tel + '">' +
+      '<input id="fecha" type="date" placeholder="Fecha" class="swal2-input" value="' + cita.fecha + '">' +
+      '<input id="hora" type="time" placeholder="Hora" class="swal2-input" value="' + cita.hora + '">' +
+      '<textarea id="sintomas" placeholder="Síntomas" class="swal2-input">' + cita.sintomas + '</textarea>',
+    focusConfirm: false,
+    showCancelButton: true,
+    preConfirm: () => {
+      const nombre = Swal.getPopup().querySelector('#nombre').value;
+      const propietario = Swal.getPopup().querySelector('#propietario').value;
+      const tipomascota = Swal.getPopup().querySelector('#tipomascota').value;
+      const tel = Swal.getPopup().querySelector('#tel').value;
+      const fecha = Swal.getPopup().querySelector('#fecha').value;
+      const hora = Swal.getPopup().querySelector('#hora').value;
+      const sintomas = Swal.getPopup().querySelector('#sintomas').value;
+
+      if (!nombre || !propietario || !tipomascota || !tel || !fecha || !hora || !sintomas) {
+        Swal.showValidationMessage('Todos los campos son obligatorios');
+        return false;
+      }
+
+      // Actualizar la cita con los nuevos valores
+      cita.nombre = nombre;
+      cita.propietario = propietario;
+      cita.tipomascota = tipomascota;
+      cita.tel = tel;
+      cita.fecha = fecha;
+      cita.hora = hora;
+      cita.sintomas = sintomas;
+
+      Swal.fire('Cita editada con éxito');
+      mostrarTarjetas();
+    }
+  });
+}
+
+
+    function anularCita(cita) {
+      // Lógica para anular la cita
+      // Puedes cambiar el estado de la cita a "anulada"
+      // Después de la anulación, actualiza la lista y muestra las tarjetas nuevamente
+      cita.estado = 'anulada';
+      mostrarTarjetas();
+      console.log('Anular cita:', cita);
+      Swal.fire('Cita anulada con éxito');
+      
+    }
+
+    // Llamar a esta función después de que se haya actualizado la lista de citas
+    mostrarTarjetas();
+  </script>
+</body>
+</html>
